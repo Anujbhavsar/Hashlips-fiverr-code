@@ -1,0 +1,293 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+p
+{
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #000000;
+}	
+
+		/*Home section Code*/
+.banner
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+}
+.banner .content{
+	max-width: 900px;
+	text-align: center;
+}
+.banner .content h2
+{
+	font-size: 5em;
+	color: #000000;
+}
+.banner .content p
+{
+	font-size: 1em;
+	color: #000000;
+}
+.btn
+{
+	font-size: 1em;
+	color: #fff;
+	background: #ff0157;
+	display: inline-block;
+	padding: 10px 30px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	transition: 0.5s;
+}
+.btn:hover
+{
+	letter-spacing: 6px;
+}
+header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 100px;
+	z-index: 10000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s;
+}
+header.sticky
+{
+	background: #fff;
+	padding: 10px 100px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+header .logo
+{
+	color: #000000;
+	font-weight: 700;
+	font-size: 2em;
+	text-decoration: none;
+}
+header.sticky .logo
+{
+	color:	#000000;
+}
+header .navigation
+{
+	position: relative;
+	display: flex;
+}
+header .navigation li{
+	list-style: none;
+	margin-left: 30px;
+}
+header .navigation li a{
+	text-decoration: none;
+	color: 	#000000;
+	font-weight: 300;
+}
+header.sticky .navigation li a{
+	color: #111;
+}
+header .navigation li a:hover
+{
+	color: #118C4F;
+}
+section
+{
+	padding: 100px;
+}
+
+  	/*About Section Code*/
+.row
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.row .col50
+{
+	position: relative;
+	width: 48%;
+}
+.titleText
+{
+	color: #111;
+	font-size: 2em;
+	font-weight: 300;
+}
+.titleText span{
+	color: #118C4F;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+.row .col50 .imgBx
+{
+	position: relative;
+	width: 100%;
+	min-height: 300px;
+	height: 100%;
+}
+.row .col50 .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/*Hashlips Code*/
+.row-hashlips
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.row-hashlips .col50-hashlips
+{
+	position: relative;
+	width: 48%;
+}
+.titleText-hashlips
+{
+	color: #111;
+	font-size: 2em;
+	font-weight: 300;
+}
+.titleText-hashlips span{
+	color: #118C4F;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+.row-hashlips .col50-hashlips .imgBx-hashlips
+{
+	position: relative;
+	width: 100%;
+	min-height: 300px;
+	height: 100%;
+}
+
+/*Setup Code*/
+.banner .content .para
+{
+	font-weight: 100;
+	font-size: 1.5em;
+}
+.col
+{
+	color: #9200fe;
+	height: 300px;
+}
+.col2
+{
+	color: #9200fe;
+	height: 300px;
+}
+.col3
+{
+	color: #9200fe;
+	height: 300px;
+}
+.col, .col2, .col3
+{
+	width: 400px;
+	float: left;
+	margin: 5px;
+	border: 2px solid #111;
+	padding: 20px;
+}
+.para-setup
+{
+	color: #9200fe;
+}
+
+/*FAQs Section code*/
+.faqs
+{
+	min-height: 100vh;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title 
+{
+	font-size: 4em;
+	margin: 2rem 0rem;
+}
+.faq
+{
+	max-width: 700px;
+	margin-top: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid #111;
+	cursor: pointer;
+}
+.question
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.question h3 
+{
+	font-size: 1.5em;
+}
+.answer
+{
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1.4s ease;
+}
+.answer p
+{
+	padding-top: 1rem;
+	line-height: 1.6;
+	font-size: 1.5em;
+}
+.faq.active .answer 
+{
+	max-height: 300px;
+	animation: fade 1s ease-in-out;
+}
+
+.faq.active svg 
+{
+	transform: rotate(180deg);
+}
+svg
+{
+	transition: transform 0.5s ease-in;
+}
+
+@keyframes fade 
+{
+	from {
+		opacity: 0;
+		transition: translateY(-10px);
+	}
+	to 
+	{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
